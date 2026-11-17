@@ -1,0 +1,82 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="theme-color" content="#121d19" />
+  <title>Beans & Bloom — Our Story</title>
+  <link rel="stylesheet" href="style.css" />
+  <script src="script.js" defer></script>
+</head>
+<body>
+  <div class="grain" aria-hidden="true"></div>
+  <header class="site-header">
+    <a href="#home" class="brand" aria-label="Back to home"><span class="brand-mark">✳</span><span id="brand-name">BEANS &amp; BLOOM</span></a>
+    <nav aria-label="Main navigation">
+      <button class="nav-link active" data-target="home">Home</button>
+      <button class="nav-link" data-target="journey">Our Journey</button>
+      <button class="nav-link" data-target="identity">Our Identity</button>
+      <button class="nav-link" data-target="finale">Finale</button>
+    </nav>
+    <span class="header-note">KAPLAN · BIZCAFE</span>
+  </header>
+
+  <main>
+    <section id="home" class="screen hero active" aria-labelledby="hero-title">
+      <div class="hero-glow glow-one"></div><div class="hero-glow glow-two"></div>
+      <div class="hero-content">
+        <p class="eyebrow reveal">A BUSINESS SIMULATION. A REAL STORY.</p>
+        <div class="line" aria-hidden="true"></div>
+        <h1 id="hero-title" class="reveal delay-1">We didn't just<br />build a café.<br /><em>We grew together.</em></h1>
+        <p class="hero-sub reveal delay-2">Welcome to Beans &amp; Bloom.<br />Ten decision rounds. Three brand identities. Five people learning to make decisions as one team.</p>
+        <div class="hero-actions reveal delay-3">
+          <button class="primary-btn" data-target="journey">ENTER OUR CAFÉ <span aria-hidden="true">↗</span></button>
+          <button class="text-btn" data-target="identity">SEE OUR EVOLUTION <span aria-hidden="true">↗</span></button>
+        </div>
+      </div>
+      <div class="hero-side" aria-hidden="true"><span class="vertical-text">BREWED WITH PURPOSE · BUILT BY DECISIONS</span><span class="hero-asterisk">✳</span></div>
+      <div class="hero-bottom"><span>01 / 04 — THE BEGINNING</span><span>SCROLL THROUGH OUR STORY ↓</span></div>
+    </section>
+
+    <section id="journey" class="screen interior" aria-labelledby="journey-title" hidden>
+      <div class="section-top"><p class="eyebrow">CHAPTER 01 / OUR JOURNEY</p><span class="small-tag">10 DECISION ROUNDS</span></div>
+      <h2 id="journey-title">Ten rounds.<br /><em>Countless choices.</em></h2>
+      <p class="section-intro">From lengthy discussions at the start to faster decisions towards the end, this is how our team developed alongside Beans &amp; Bloom. The choices below are examples until we add our real decisions and results.</p>
+      <div class="growth-timeline" aria-label="How our teamwork evolved">
+        <div class="growth-step"><span>01 · THE BEGINNING</span><h3>Finding our feet</h3><p>Different ideas. Long conversations. Taking time to reach a shared conclusion.</p></div>
+        <div class="growth-step"><span>02 · THE MIDDLE</span><h3>Learning our rhythm</h3><p>We began building on each other’s perspectives and finding ways to move forward together.</p></div>
+        <div class="growth-step"><span>03 · THE END</span><h3>Deciding with confidence</h3><p>We became quicker at reaching decisions while still considering their impact.</p></div>
+      </div>
+      <div class="round-context" id="round-context" aria-live="polite"></div>
+      <div class="round-picker" id="round-picker" aria-label="Select decision round"></div>
+      <article class="decision-card" id="decision-card">
+        <div class="decision-text"><p class="eyebrow" id="round-label">ROUND 01</p><h3 id="round-title">Setting the scene</h3><p id="round-description">Every successful café starts with a clear idea.</p><div class="decision-buttons" id="decision-buttons"></div><p class="hint" id="decision-hint">Select an option to reveal what we chose.</p></div>
+        <aside class="result-panel"><div class="panel-head"><span>THE CONSEQUENCE</span><span class="panel-dot">●</span></div><div id="decision-reveal" class="reveal-empty"><span class="big-symbol">?</span><p>Make your choice to reveal our team's decision and reasoning.</p></div></aside>
+      </article>
+      <div class="section-footer"><button class="text-btn" data-target="home">← BACK HOME</button><button class="primary-btn" data-target="identity">OUR IDENTITY <span>↗</span></button></div>
+    </section>
+
+    <section id="identity" class="screen interior identity" aria-labelledby="identity-title" hidden>
+      <div class="section-top"><p class="eyebrow">CHAPTER 02 / BRAND EVOLUTION</p><span class="small-tag">3 LOGO VERSIONS</span></div>
+      <h2 id="identity-title">Same café.<br /><em>A changing identity.</em></h2>
+      <p class="section-intro">Beans &amp; Bloom went through three logo versions. Our evolving look is part of our team story. The designs below are temporary until we add our real logos.</p>
+      <div class="logo-grid">
+        <article class="logo-card"><div class="logo-art logo-art-one"><span>BEANS<br />&amp; BLOOM<span class="logo-star">✳</span></span></div><div class="logo-details"><span>01 / THE BEGINNING</span><h3>Our first idea</h3><p>Why we started with this identity — add your story here.</p></div></article>
+        <article class="logo-card"><div class="logo-art logo-art-two"><span class="logo-circle">B<span>✳</span></span></div><div class="logo-details"><span>02 / THE RETHINK</span><h3>Finding our direction</h3><p>What feedback or strategy encouraged a redesign?</p></div></article>
+        <article class="logo-card"><div class="logo-art logo-art-three"><span class="final-logo-type">Beans <span class="accent">&amp;</span> Bloom<small>EST. BIZCAFE</small></span></div><div class="logo-details"><span>03 / THE FINAL LOOK</span><h3>Our refined brand</h3><p>Explain how the final logo represents your café.</p></div></article>
+      </div>
+      <div class="section-footer"><button class="text-btn" data-target="journey">← OUR JOURNEY</button><button class="primary-btn" data-target="finale">THE FINAL VERDICT <span>↗</span></button></div>
+    </section>
+
+    <section id="finale" class="screen interior finale" aria-labelledby="finale-title" hidden>
+      <div class="section-top"><p class="eyebrow">CHAPTER 03 / THE FINAL VERDICT</p><span class="small-tag">OUR RESULTS</span></div>
+      <h2 id="finale-title">The story is<br /><em>in the numbers.</em></h2>
+      <p class="section-intro">Once your scores arrive, we can turn this into an animated dashboard with trends across all ten rounds.</p>
+      <div class="score-grid"><article class="score"><span>REVENUE</span><strong>—</strong><small>Awaiting results</small></article><article class="score"><span>PROFIT</span><strong>—</strong><small>Awaiting results</small></article><article class="score"><span>CUSTOMER SATISFACTION</span><strong>—</strong><small>Awaiting results</small></article><article class="score"><span>OVERALL PERFORMANCE</span><strong>—</strong><small>Awaiting results</small></article></div>
+      <div class="closing"><p>We started by taking our time to agree.</p><h3>We finished making decisions <em>together.</em></h3><span>THANK YOU FOR BEING PART OF OUR STORY.</span></div>
+      <div class="section-footer"><button class="text-btn" data-target="identity">← OUR IDENTITY</button><button class="primary-btn" data-target="home">BACK TO THE BEGINNING ↗</button></div>
+    </section>
+  </main>
+  <footer class="global-footer"><span>MADE FOR THE BIZCAFE EXPERIENCE</span><span>PRESS ← → TO NAVIGATE</span></footer>
+</body>
+</html>
