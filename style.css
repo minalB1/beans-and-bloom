@@ -51,7 +51,7 @@ body:has(.vintage-journey.active) .global-footer {background:#eee5d0;color:#3652
 .gold-btn span {margin-left:1.2rem;font-size:1.1rem;}
 .quiet-btn {border:0;background:transparent;color:#d9c6a7;font-size:.72rem;letter-spacing:.13em;cursor:pointer;padding:.7rem;border-bottom:1px solid #a99770;}
 .home-smallnote {margin-top:2.8rem;color:#c5b99e;font-size:.7rem;letter-spacing:.1em;}
-.home-visual {min-height:610px;display:flex;align-items:center;justify-content:center;transform: translateY(-180px);}
+.home-visual {min-height:610px;display:flex;align-items:center;justify-content:center;}
 .home-photo {position:absolute;right:9%;top:0;height:95%;width:min(69%,390px);padding:9px;border:1px solid #b49d6959;box-shadow:0 30px 85px #0009;transform:rotate(2deg);background:#101710;animation:photo-arrive 1s .25s both;}
 .home-photo>img {width:100%;height:calc(100% - 31px);object-fit:cover;object-position:center;display:block;}
 .photo-caption {display:block;text-align:center;color:#c5a97b;letter-spacing:.15em;font-size:.56rem;padding-top:10px;}
@@ -98,3 +98,29 @@ body:has(.vintage-journey.active) .global-footer {background:#eee5d0;color:#3652
 @media(max-width:900px){.christmas-home{grid-template-columns:1fr;padding-top:3rem}.home-visual{min-height:500px}.home-photo{right:20%;width:48%;}.cup-floating{left:20%;width:25%;}.home-bottom{display:none}.home-logo{width:115px;height:115px}}
 @media(max-width:560px){.home-visual{min-height:350px}.home-photo{right:3%;width:65%;}.cup-floating{left:3%;width:35%;height:190px}.christmas-home{padding:3rem 1.2rem}.original-brand-strip{flex-direction:column;text-align:center}}
 @media(prefers-reduced-motion:reduce){.rewind-ring span,.rewind-overlay.playing:after,.home-editorial,.home-photo,.cup-floating{animation:none!important}.rewind-overlay{transition:none!important}}
+
+
+/* === V3 HOMEPAGE IMAGE ALIGNMENT FIX (23 NOV 2026) ===
+   Align the Christmas ad and coffee cup with the headline rather
+   than centring the visual column vertically in the tall hero. */
+@media (min-width: 901px) {
+  .christmas-home {
+    align-items: start;
+  }
+  .home-visual {
+    align-self: start;
+    min-height: 560px;
+    height: 560px;
+    margin-top: 0;
+  }
+  .home-photo {
+    top: 0;
+    bottom: auto;
+    height: 490px;
+    right: 9%;
+  }
+  .cup-floating {
+    top: 215px;
+    bottom: auto;
+  }
+}
