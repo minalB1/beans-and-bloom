@@ -51,7 +51,7 @@ body:has(.vintage-journey.active) .global-footer {background:#eee5d0;color:#3652
 .gold-btn span {margin-left:1.2rem;font-size:1.1rem;}
 .quiet-btn {border:0;background:transparent;color:#d9c6a7;font-size:.72rem;letter-spacing:.13em;cursor:pointer;padding:.7rem;border-bottom:1px solid #a99770;}
 .home-smallnote {margin-top:2.8rem;color:#c5b99e;font-size:.7rem;letter-spacing:.1em;}
-.home-visual {min-height:610px;display:flex;align-items:center;justify-content:center;}
+.home-visual {min-height:610px;display:flex;align-items:center;justify-content:center;transform: translateY(-180px);}
 .home-photo {position:absolute;right:9%;top:0;height:95%;width:min(69%,390px);padding:9px;border:1px solid #b49d6959;box-shadow:0 30px 85px #0009;transform:rotate(2deg);background:#101710;animation:photo-arrive 1s .25s both;}
 .home-photo>img {width:100%;height:calc(100% - 31px);object-fit:cover;object-position:center;display:block;}
 .photo-caption {display:block;text-align:center;color:#c5a97b;letter-spacing:.15em;font-size:.56rem;padding-top:10px;}
