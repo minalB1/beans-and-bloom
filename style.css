@@ -132,9 +132,20 @@ body:has(.vintage-journey.active) .global-footer {background:#eee5d0;color:#3652
     transform: translateY(-190px);
   }
 }
-/* Keep the stacked mobile / narrow-laptop layout within the viewport. */
-@media (max-width: 900px) {
-  .christmas-home .home-visual {
-    transform: none;
-  }
+
+/* BEANS & BLOOM — CHRISTMAS HOMEPAGE */
+
+body:has(#home:not(.hidden)) {
+    background:
+        radial-gradient(
+            ellipse at 25% 35%,
+            rgba(175, 125, 40, 0.18),
+            transparent 55%
+        ),
+        linear-gradient(
+            135deg,
+            #080808 0%,
+            #17120E 55%,
+            #090909 100%
+        );
 }
