@@ -137,15 +137,15 @@ body:has(.vintage-journey.active) .global-footer {background:#eee5d0;color:#3652
 
 body:has(#home:not(.hidden)) {
     background:
-        radial-gradient(
-            ellipse at 25% 35%,
-            rgba(175, 125, 40, 0.18),
-            transparent 55%
-        ),
-        linear-gradient(
-            135deg,
-            #080808 0%,
-            #17120E 55%,
-            #090909 100%
-        );
+    radial-gradient(
+        ellipse at 20% 40%,
+        rgba(140, 20, 35, 0.28),
+        transparent 55%
+    ),
+    radial-gradient(
+        ellipse at 80% 20%,
+        rgba(214, 170, 88, 0.16),
+        transparent 50%
+    ),
+    #080808;
 }
