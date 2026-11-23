@@ -1,19 +1,18 @@
 /* EDIT THIS FIRST: replace the placeholder café name with your actual name. */
 const CAFE_NAME = 'BEANS & BLOOM';
 
-/* TEMPLATE DATA: These choices are examples, NOT your actual BizCafe decisions.
-   Once you send your real decisions/scores, replace each round with those details. */
+/* Real selected decisions from the team report; alternatives are illustrative audience prompts. */
 const rounds = [
-  {title:'Setting the scene',description:'What kind of café should we create?',choices:['Modern & organic','Cosy & traditional'],selected:0,reason:'EXAMPLE ONLY: This is where we explain why we chose a modern and organic direction, and what happened next.'},
-  {title:'Finding our customers',description:'Who did we want our café to appeal to?',choices:['Students & commuters','Premium coffee lovers'],selected:0,reason:'Placeholder: explain the market segment you targeted and why.'},
-  {title:'Building the menu',description:'Which direction did we take with our product offering?',choices:['Focused menu','Expanded selection'],selected:1,reason:'Placeholder: add your actual product or menu decision.'},
-  {title:'The price of a coffee',description:'How did we balance customer demand and margins?',choices:['Competitive pricing','Premium pricing'],selected:0,reason:'Placeholder: explain your pricing strategy and sales impact.'},
-  {title:'Getting noticed',description:'How did we decide to attract new customers?',choices:['Digital promotion','Local advertising'],selected:0,reason:'Placeholder: add your actual marketing decision and its effect.'},
-  {title:'The people behind the counter',description:'How did we approach staffing our café?',choices:['Increase staffing','Maintain staffing'],selected:1,reason:'Placeholder: explain service quality, staffing cost and demand.'},
-  {title:'Quality or quantity?',description:'What was our operational priority?',choices:['Quality first','Faster throughput'],selected:0,reason:'Placeholder: describe the trade-off you faced.'},
-  {title:'Reacting to the numbers',description:'What did we change after reviewing performance?',choices:['Adjust prices','Adjust spending'],selected:1,reason:'Placeholder: show how the prior round’s results influenced you.'},
-  {title:'Our final push',description:'Which lever did we prioritise near the end?',choices:['Invest for growth','Protect profit'],selected:1,reason:'Placeholder: add your actual late-stage strategy.'},
-  {title:'The final decision',description:'How did we bring everything together?',choices:['Stay the course','Make a bold change'],selected:0,reason:'Placeholder: reveal your last decision, its result and lesson.'}
+  {title:'Launching Beans & Bloom',description:'How should we position the café at launch?',choices:['Fair-trade organic coffee','Standard coffee'],selected:0,reason:'We chose fair-trade organic coffee with green furniture and an Auto-Four machine. Week 1 ended with a $4,092 loss — an early reality check.'},
+  {title:'Responding to early feedback',description:'Should we invest in baked goods?',choices:['Purchase an oven','Keep coffee only'],selected:0,reason:'We invested $4,000 in an oven, reduced medium coffee pricing and extended opening hours. Week 2 returned a $4,343 net profit.'},
+  {title:'Investing in the experience',description:'Would extra staff training be worthwhile?',choices:['Buy a training programme','Skip training'],selected:0,reason:'We purchased a $1,200 training programme and offered free high-speed internet. Week 3 customer satisfaction was 58.9.'},
+  {title:'Making more responsible choices',description:'How should we handle organic waste?',choices:['Separate for composting','No additional separation'],selected:0,reason:'We chose collection for composting. We also deferred selling sandwiches. Week 4 weekly profit was $5,030.'},
+  {title:'Taking the expansion decision',description:'Should we expand café capacity?',choices:['Rent space and add machine','Stay at existing capacity'],selected:0,reason:'We rented additional space and bought another Auto-Four machine. Weekly profit grew to $6,964 in Week 5.'},
+  {title:'A bigger customer opportunity',description:'How could we reach demand outside the café?',choices:['Use a mobile coffee cart','Stay inside the café'],selected:0,reason:'We obtained a vendor licence and rented a mobile cart. Week 6 revenue was $32,260, our highest weekly revenue.'},
+  {title:'Protecting customer relationships',description:'How should we handle an irate customer?',choices:['Apologise and offer coffee','Ignore the complaint'],selected:0,reason:'We apologised and offered a complimentary coffee. This round also included buying a coffee roaster and updating our brand. Week 7 profit reached $12,029.'},
+  {title:'Learning to stand by decisions',description:'Should we change our supplier?',choices:['Keep our existing supplier','Switch supplier'],selected:0,reason:'We stayed with our existing supplier. Week 8 delivered our highest weekly net income: $15,260. This does not prove any single decision caused that result.'},
+  {title:'Creating a memorable experience',description:'Should we host live entertainment?',choices:['Host a local jazz band','No live entertainment'],selected:0,reason:'We chose the local high-school jazz band and updated our Christmas branding. Weekly net income dropped to $6,509 in Week 9, reminding us to watch the costs of growth.'},
+  {title:'Our last trading decisions',description:'How should we approach staff benefits?',choices:['Comprehensive Care','Maintain previous cover'],selected:0,reason:'We selected Comprehensive Care for servers and adjusted wages and coffee prices. Week 10 customer satisfaction reached 80.6 and awareness 98.1, but weekly net income fell to $2,868.'}
 ];
 
 const screenIds=['home','journey','identity','finale'];
@@ -51,7 +50,7 @@ function showRound(index){
   const phaseDescription=document.createElement('span');phaseDescription.textContent=phase[1];
   context.append(phaseLabel,phaseDescription);
   document.getElementById('round-description').textContent=round.description;
-  document.getElementById('decision-hint').textContent='Select either option to reveal our choice.';
+  document.getElementById('decision-hint').textContent='Audience options are illustrative; click to reveal the recorded decision.';
   const container=document.getElementById('decision-buttons');
   container.replaceChildren();
   round.choices.forEach((choice,choiceIndex)=>{

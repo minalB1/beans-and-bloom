@@ -14,3 +14,13 @@
 .logo-art-one>span{font-size:39px;line-height:1.1}
 .logo-art-three>span.final-logo-type{font-size:clamp(23px,2.5vw,40px);letter-spacing:-.04em}
 @media(max-width:680px){.growth-timeline{grid-template-columns:1fr}.growth-step{min-height:auto}.round-context{flex-direction:column;align-items:flex-start}.logo-art-one>span{font-size:36px}}
+
+/* Compact presentation enhancements */
+.speaker-cue{color:#e1ce98;background:#28382c;border-left:3px solid #e1ce98;padding:12px 15px;font-size:11px;letter-spacing:.08em;margin:10px 0 20px}
+.score strong{font-size:clamp(27px,3.3vw,52px)}
+.results-story{margin-top:20px;border:1px solid var(--line);padding:25px;background:#1e2c24}
+.results-story h3{font:normal 28px Georgia,serif}.results-story p{max-width:800px;color:var(--muted);line-height:1.6}.results-story small{color:var(--muted)}
+.mini-bars{height:150px;display:flex;align-items:end;gap:10px;border-bottom:1px solid #87988a;margin:24px 0 7px}
+.mini-bars span{flex:1;background:linear-gradient(#e6d39b,#89996b);font-size:11px;display:flex;align-items:end;justify-content:center;color:#102018;padding-bottom:5px;min-height:14px}
+.mini-bars span:first-child{background:#b76b65}
+@media(max-width:680px){.mini-bars{gap:4px}.mini-bars span{font-size:9px}}
