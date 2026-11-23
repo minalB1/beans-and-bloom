@@ -149,3 +149,20 @@ body:has(#home:not(.hidden)) {
     ),
     #080808;
 }
+
+/* CHRISTMAS HOMEPAGE - BLACK, RED & GOLD */
+
+.christmas-home {
+    background:
+        radial-gradient(
+            ellipse at 20% 45%,
+            rgba(145, 20, 30, 0.35),
+            transparent 55%
+        ),
+        radial-gradient(
+            ellipse at 80% 25%,
+            rgba(212, 175, 90, 0.22),
+            transparent 50%
+        ),
+        #090909;
+}
