@@ -13,8 +13,8 @@
   <header class="site-header">
     <a href="#home" class="brand" aria-label="Back to home"><span class="brand-mark">✳</span><span id="brand-name">BEANS &amp; BLOOM</span></a>
     <nav aria-label="Main navigation">
-      <button class="nav-link active" data-target="home">Home</button>
-      <button class="nav-link" data-target="journey">Our Journey</button>
+      <button class="nav-link active" data-target="home">The Café</button>
+      <button class="nav-link" data-target="journey">The Journey</button>
       <button class="nav-link" data-target="identity">Our Identity</button>
       <button class="nav-link" data-target="finale">Finale</button>
     </nav>
@@ -22,26 +22,35 @@
   </header>
 
   <main>
-    <section id="home" class="screen hero active" aria-labelledby="hero-title">
-      <div class="hero-glow glow-one"></div><div class="hero-glow glow-two"></div>
-      <div class="hero-content">
-        <p class="eyebrow reveal">A BUSINESS SIMULATION. A REAL STORY.</p>
-        <div class="line" aria-hidden="true"></div>
-        <h1 id="hero-title" class="reveal delay-1">We didn't just<br />build a café.<br /><em>We grew together.</em></h1>
-        <p class="hero-sub reveal delay-2">Welcome to Beans &amp; Bloom.<br />Five people. Ten rounds. Three identities. One team learning to decide together.</p>
-        <div class="hero-actions reveal delay-3">
-          <button class="primary-btn" data-target="journey">ENTER OUR CAFÉ <span aria-hidden="true">↗</span></button>
-          <button class="text-btn" data-target="identity">SEE OUR EVOLUTION <span aria-hidden="true">↗</span></button>
-        </div>
+    <section id="home" class="screen christmas-home active" aria-labelledby="hero-title">
+      <div class="home-snow" aria-hidden="true"></div>
+      <div class="home-editorial">
+        <div class="home-kicker"><span class="kicker-line"></span> THE FESTIVE COLLECTION · BEANS &amp; BLOOM</div>
+        <img class="home-logo" src="assets/final-logo.jpg" alt="Beans & Bloom final black-and-gold logo" />
+        <p class="home-intro-label">EST. 2026 · PURE BEANS. PURE COFFEE.</p>
+        <h1 id="hero-title">Your favourite cup.<br/><em>Our favourite season.</em></h1>
+        <p class="home-copy">A warm welcome, a fresh brew, and a little Christmas magic. Discover the café we became.</p>
+        <div class="home-buttons"><button class="gold-btn" id="open-story">VIEW OUR JOURNEY <span aria-hidden="true">↗</span></button><button class="quiet-btn" id="open-campaign">OUR FESTIVE CAMPAIGN ↓</button></div>
+        <div class="home-smallnote">A BizCafe creation by five teammates. Ten rounds of decisions.</div>
       </div>
-      <div class="hero-side" aria-hidden="true"><span class="vertical-text">BREWED WITH PURPOSE · BUILT BY DECISIONS</span><span class="hero-asterisk">✳</span></div>
-      <div class="hero-bottom"><span>CHAPTER 01 / 04 — THE BEGINNING</span><span>5 SPEAKERS · ~8 MINUTES</span></div>
+      <div class="home-visual"><div class="home-photo"><img src="assets/christmas-ad.jpg" alt="Our Beans & Bloom Christmas campaign featuring festive café artwork"/><span class="photo-caption">THE SEASONAL CAMPAIGN · BEANS &amp; BLOOM</span></div><div class="cup-floating"><img src="assets/christmas-cup.jpg" alt="Our Beans & Bloom festive Santa-belt coffee cup design"/></div></div>
+      <div id="campaign-detail" class="campaign-detail" hidden><span>OUR CHRISTMAS CAMPAIGN</span><p>Our final brand expanded beyond the logo into an advertisement and matching takeaway cup — the identity our team developed together.</p><button id="close-campaign" class="quiet-btn">CLOSE ↑</button></div>
+      <div class="home-bottom"><span>FRESHLY BREWED IDEAS · COLLECTIVE DECISIONS</span><span>01 / THE CAFÉ TODAY</span></div>
     </section>
 
-    <section id="journey" class="screen interior" aria-labelledby="journey-title" hidden>
-      <div class="section-top"><p class="eyebrow">CHAPTER 01 / OUR JOURNEY</p><span class="small-tag">10 DECISION ROUNDS</span></div>
-      <h2 id="journey-title">Ten rounds.<br /><em>Countless choices.</em></h2>
-      <p class="section-intro">From lengthy discussions at the start to faster decisions towards the end, this is how our team developed alongside Beans &amp; Bloom. Select a round to explore a real decision and its result. During our presentation, we will spotlight only three pivotal decisions; the other rounds remain available to explore.</p>
+    <div id="rewind-overlay" class="rewind-overlay" aria-hidden="true" role="presentation">
+      <div class="rewind-ring" aria-hidden="true"><span>⟲</span></div>
+      <p class="rewind-overline" id="rewind-overline">LET'S GO BACK</p>
+      <div class="rewind-number" id="rewind-number">10</div>
+      <h2 id="rewind-title">DECISIONS EARLIER…</h2>
+      <div class="rewind-track"><span id="rewind-progress"></span></div>
+      <p class="rewind-foot">BEFORE THE LOGOS. BEFORE THE RESULTS. THERE WERE FIVE OF US.</p>
+    </div>
+
+    <section id="journey" class="screen interior vintage-journey" aria-labelledby="journey-title" hidden>
+      <div class="original-brand-strip"><span class="original-mark">✳ &nbsp; BEANS &amp; BLOOM</span><span>THE ORIGINAL CHAPTER · CREAM &amp; GREEN</span></div><div class="section-top"><p class="eyebrow">CHAPTER 01 / OUR JOURNEY</p><span class="small-tag">10 DECISION ROUNDS</span></div>
+      <h2 id="journey-title">It started with<br /><em>one big decision.</em></h2>
+      <p class="section-intro">We began as five individuals with different ideas. Rewind to our first decisions, then follow the ten rounds that shaped our café — and the way we worked together.</p>
       <p class="speaker-cue">SPEAKER 1 · INTRO &amp; EARLY TEAMWORK — 1:20 &nbsp; → &nbsp; SPEAKERS 2–3 · DECISIONS &amp; DEVELOPMENT — 3:00</p><div class="growth-timeline" aria-label="How our teamwork evolved">
         <div class="growth-step"><span>01 · THE BEGINNING</span><h3>Finding our feet</h3><p>Different ideas. Long conversations. Taking time to reach a shared conclusion.</p></div>
         <div class="growth-step"><span>02 · THE MIDDLE</span><h3>Learning our rhythm</h3><p>We began building on each other’s perspectives and finding ways to move forward together.</p></div>

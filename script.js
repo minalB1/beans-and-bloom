@@ -102,3 +102,41 @@ function init(){
   showScreen(screenIds.includes(hash)?hash:'home');
 }
 init();
+
+// Flashback intro — a self-contained transition, suitable for GitHub Pages and offline browsers.
+let flashbackBusy=false;
+const delay=ms=>new Promise(resolve=>setTimeout(resolve,ms));
+async function startFlashback(){
+  if(flashbackBusy)return;
+  flashbackBusy=true;
+  const overlay=document.getElementById('rewind-overlay');
+  const counter=document.getElementById('rewind-number');
+  const progress=document.getElementById('rewind-progress');
+  const overline=document.getElementById('rewind-overline');
+  const heading=document.getElementById('rewind-title');
+  overlay.classList.remove('cream');
+  overlay.classList.add('playing');
+  overlay.setAttribute('aria-hidden','false');
+  document.body.style.overflow='hidden';
+  const reduced=window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+  await delay(reduced?150:330);
+  for(let number=10;number>=1;number--){
+    counter.textContent=number;
+    progress.style.width=`${(11-number)*10}%`;
+    await delay(reduced?25:115);
+  }
+  overlay.classList.add('cream');
+  overline.textContent='BACK TO WHERE IT ALL BEGAN';
+  heading.textContent='WEEK ONE · THE FIRST BREW';
+  counter.textContent='01';
+  showScreen('journey');
+  showRound(0);
+  await delay(reduced?120:850);
+  overlay.classList.remove('playing');
+  overlay.setAttribute('aria-hidden','true');
+  document.body.style.overflow='';
+  flashbackBusy=false;
+}
+document.getElementById('open-story').addEventListener('click',startFlashback);
+document.getElementById('open-campaign').addEventListener('click',()=>{document.getElementById('campaign-detail').hidden=false});
+document.getElementById('close-campaign').addEventListener('click',()=>{document.getElementById('campaign-detail').hidden=true});
