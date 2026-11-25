@@ -43,7 +43,7 @@ function showRound(index){
   });
   document.getElementById('round-label').textContent=`DECISION ROUND ${String(index+1).padStart(2,'0')} / 10`;
   document.getElementById('round-title').textContent=round.title;
-  const phase=index<3?['THE BEGINNING · FINDING OUR FEET','Early on, it took us longer to agree on our decisions.']:index<7?['THE MIDDLE · FINDING OUR RHYTHM','As the rounds went on, we were learning how to discuss options and reach a conclusion.']:['THE END · GROWING IN CONFIDENCE','Towards the end, our team was reaching decisions much more quickly.'];
+  const phase=index<3?[]:index<7?[]:[];
   const context=document.getElementById('round-context');
   context.replaceChildren();
   const phaseLabel=document.createElement('strong');phaseLabel.textContent=phase[0];
@@ -140,3 +140,61 @@ async function startFlashback(){
 document.getElementById('open-story').addEventListener('click',startFlashback);
 document.getElementById('open-campaign').addEventListener('click',()=>{document.getElementById('campaign-detail').hidden=false});
 document.getElementById('close-campaign').addEventListener('click',()=>{document.getElementById('campaign-detail').hidden=true});
+
+
+// ======================================
+// ZAC'S TEAM DEVELOPMENT REVEAL
+// ======================================
+
+const teamCards = [
+    ...document.querySelectorAll(".team-development-card")
+];
+
+const teamRevealButton = document.getElementById("team-reveal");
+const teamResetButton = document.getElementById("team-reset");
+const teamProgress = document.getElementById("team-progress");
+const teamFinal = document.getElementById("team-final");
+
+let teamStep = 0;
+
+function updateTeamProgress() {
+    teamProgress.textContent = `${teamStep} / 3 REVEALED`;
+    teamRevealButton.disabled = teamStep >= 3;
+}
+
+function revealNextTeamStage() {
+    if (teamStep >= teamCards.length) return;
+
+    const card = teamCards[teamStep];
+
+    card.hidden = false;
+    card.classList.add("is-revealed");
+
+    teamStep++;
+
+    updateTeamProgress();
+
+    if (teamStep === 3) {
+        teamFinal.hidden = false;
+        teamFinal.classList.add("is-revealed");
+    }
+}
+
+function resetTeamStages() {
+    teamStep = 0;
+
+    teamCards.forEach(card => {
+        card.hidden = true;
+        card.classList.remove("is-revealed");
+    });
+
+    teamFinal.hidden = true;
+    teamFinal.classList.remove("is-revealed");
+
+    updateTeamProgress();
+}
+
+teamRevealButton.addEventListener("click", revealNextTeamStage);
+teamResetButton.addEventListener("click", resetTeamStages);
+
+resetTeamStages();

@@ -502,3 +502,194 @@ body:has(#identity:not([hidden])) .brand-mark {
     background: #090909;
 }
 
+
+/* ======================================
+   OUR JOURNEY — TEAM DEVELOPMENT
+====================================== */
+
+.vintage-journey .team-development {
+    margin-top: 65px;
+    padding: 38px 0 20px;
+    color: #304735;
+    border-top: 1px solid #C8B893;
+}
+
+.vintage-journey .team-development-label {
+    color: #A17C41;
+    font-size: 11px;
+    font-weight: bold;
+    letter-spacing: 3px;
+}
+
+.vintage-journey .team-development h3 {
+    font-family: Georgia, serif;
+    font-size: clamp(32px, 4vw, 58px);
+    font-weight: normal;
+    line-height: 1.15;
+    margin: 20px 0;
+}
+
+.vintage-journey .team-development h3 em {
+    color: #C49A4D;
+    font-weight: normal;
+}
+
+.vintage-journey .team-development-intro {
+    color: #677467;
+    font-size: 15px;
+    line-height: 1.7;
+    margin-bottom: 32px;
+}
+
+/* THREE CARDS */
+
+.vintage-journey .team-development-grid {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 16px;
+    align-items: stretch;
+}
+
+.vintage-journey .team-development-card {
+    background: #FFF9ED;
+    border: 1px solid #CBBB98;
+    border-top: 3px solid #C49A4D;
+    padding: 28px 24px;
+    min-height: 225px;
+    box-shadow: 0 8px 24px rgba(65, 48, 28, 0.06);
+}
+
+.vintage-journey .team-development-card[hidden],
+.vintage-journey .team-final-message[hidden] {
+    display: none !important;
+}
+
+.vintage-journey .team-development-card.is-revealed {
+    animation: teamCardReveal 0.65s ease both;
+}
+
+.vintage-journey .team-development-card span {
+    display: block;
+    color: #A17C41;
+    font-size: 10px;
+    letter-spacing: 2px;
+    margin-bottom: 22px;
+}
+
+.vintage-journey .team-development-card h4 {
+    font-family: Georgia, serif;
+    color: #304735;
+    font-size: 25px;
+    font-weight: normal;
+    margin: 0 0 16px;
+}
+
+.vintage-journey .team-development-card p {
+    color: #637262;
+    font-size: 14px;
+    line-height: 1.9;
+}
+
+/* BUTTONS */
+
+.vintage-journey .team-development-controls {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 15px;
+    margin-top: 25px;
+}
+
+.vintage-journey #team-progress {
+    color: #927541;
+    font-size: 11px;
+    letter-spacing: 2px;
+}
+
+.vintage-journey .team-development-actions {
+    display: flex;
+    gap: 12px;
+}
+
+.vintage-journey #team-reveal {
+    background: #304735;
+    color: #FFF9ED;
+    border: 1px solid #304735;
+    padding: 15px 24px;
+    font-size: 11px;
+    font-weight: bold;
+    letter-spacing: 1px;
+}
+
+.vintage-journey #team-reset {
+    background: transparent;
+    color: #304735;
+    border: 1px solid #B9AD90;
+    padding: 15px 22px;
+    font-size: 11px;
+}
+
+.vintage-journey #team-reveal:hover {
+    background: #49674C;
+}
+
+.vintage-journey #team-reveal:disabled {
+    opacity: 0.5;
+    cursor: default;
+}
+
+/* FINAL STATEMENT */
+
+.vintage-journey .team-final-message {
+    margin-top: 35px;
+    padding: 30px;
+    background: #304735;
+    color: #FFF9ED;
+    font-family: Georgia, serif;
+    font-size: clamp(23px, 3vw, 38px);
+    text-align: center;
+    line-height: 1.5;
+}
+
+.vintage-journey .team-final-message em {
+    display: block;
+    color: #E2BF7D;
+    margin-top: 8px;
+}
+
+.vintage-journey .team-final-message.is-revealed {
+    animation: teamCardReveal 0.8s ease both;
+}
+
+/* ANIMATION */
+
+@keyframes teamCardReveal {
+    from {
+        opacity: 0;
+        transform: translateY(35px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* SMALLER SCREENS */
+
+@media (max-width: 800px) {
+    .vintage-journey .team-development-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .vintage-journey .team-development-controls {
+        flex-wrap: wrap;
+    }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .vintage-journey .is-revealed {
+        animation: none !important;
+    }
+}
+

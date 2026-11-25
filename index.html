@@ -18,7 +18,7 @@
       <button class="nav-link active" data-target="home">The Café</button>
       <button class="nav-link" data-target="journey">The Journey</button>
       <button class="nav-link" data-target="identity">Our Identity</button>
-      <button class="nav-link" data-target="finale">Finale</button>
+      <button class="nav-link" data-target="finale">Finance</button>
     </nav>
     <span class="header-note">KAPLAN · BIZCAFE</span>
   </header>
@@ -74,17 +74,89 @@
       <div class="original-brand-strip"><span class="original-mark">✳ &nbsp; BEANS &amp; BLOOM</span><span>THE ORIGINAL CHAPTER · CREAM &amp; GREEN</span></div><div class="section-top"><p class="eyebrow">CHAPTER 01 / OUR JOURNEY</p><span class="small-tag">10 DECISION ROUNDS</span></div>
       <h2 id="journey-title">It started with<br /><em>one big decision.</em></h2>
       <p class="section-intro">We began as five individuals with different ideas. Rewind to our first decisions, then follow the ten rounds that shaped our café — and the way we worked together.</p>
-      <p class="speaker-cue"> <div class="growth-timeline" aria-label="How our teamwork evolved">
-        <div class="growth-step"><span>01 · THE BEGINNING</span><h3>Finding our feet</h3><p>Different ideas. Long conversations. Taking time to reach a shared conclusion.</p></div>
-        <div class="growth-step"><span>02 · THE MIDDLE</span><h3>Learning our rhythm</h3><p>We began building on each other’s perspectives and finding ways to move forward together.</p></div>
-        <div class="growth-step"><span>03 · THE END</span><h3>Deciding with confidence</h3><p>We became quicker at reaching decisions while still considering their impact.</p></div>
-      </div>
       <div class="round-context" id="round-context" aria-live="polite"></div>
       <div class="round-picker" id="round-picker" aria-label="Select decision round"></div>
       <article class="decision-card" id="decision-card">
         <div class="decision-text"><p class="eyebrow" id="round-label">ROUND 01</p><h3 id="round-title">Setting the scene</h3><p id="round-description">Every successful café starts with a clear idea.</p><div class="decision-buttons" id="decision-buttons"></div><p class="hint" id="decision-hint">Select an option to reveal what we chose.</p></div>
         <aside class="result-panel"><div class="panel-head"><span>THE CONSEQUENCE</span><span class="panel-dot">●</span></div><div id="decision-reveal" class="reveal-empty"><span class="big-symbol">?</span><p>Make your choice to reveal our team's decision and reasoning.</p></div></aside>
       </article>
+
+<!-- ZAC'S TEAM DEVELOPMENT SECTION -->
+
+<section class="team-development" aria-labelledby="team-title">
+
+    <p class="team-development-label">
+        02 / HOW WE GREW AS A TEAM
+    </p>
+
+    <h3 id="team-title">
+        From different opinions
+        <em>to shared decisions.</em>
+    </h3>
+
+    <p class="team-development-intro">
+        Our biggest development wasn't just in our café.
+        It was in how we worked together.
+    </p>
+
+    <div class="team-development-grid">
+
+        <!-- STAGE 1 -->
+        <div class="team-development-card" data-step="1" hidden>
+            <span>01 / THE BEGINNING</span>
+            <h4>Finding our feet</h4>
+            <p>
+                Different opinions.<br>
+                Lengthy discussions.<br>
+                Difficulty reaching agreement.
+            </p>
+        </div>
+
+        <!-- STAGE 2 -->
+        <div class="team-development-card" data-step="2" hidden>
+            <span>02 / THE TURNING POINT</span>
+            <h4>Learning our rhythm</h4>
+            <p>
+                Listening to reasoning.<br>
+                Weighing up pros and cons.<br>
+                Voting when necessary.
+            </p>
+        </div>
+
+        <!-- STAGE 3 -->
+        <div class="team-development-card" data-step="3" hidden>
+            <span>03 / THE OUTCOME</span>
+            <h4>Deciding with confidence</h4>
+            <p>
+                Productive disagreements.<br>
+                Equal voices.<br>
+                Moving forward together.
+            </p>
+        </div>
+
+    </div>
+
+    <div class="team-development-controls">
+        <span id="team-progress">0 / 3 REVEALED</span>
+
+        <div class="team-development-actions">
+            <button id="team-reset" type="button">
+                Reset
+            </button>
+
+            <button id="team-reveal" type="button">
+                REVEAL NEXT →
+            </button>
+        </div>
+    </div>
+
+    <div class="team-final-message" id="team-final" hidden>
+        We didn't always agree.
+        <em>We learned how to disagree productively.</em>
+    </div>
+
+</section>
+
       <div class="section-footer"><button class="text-btn" data-target="home">← BACK HOME</button><button class="primary-btn" data-target="identity">OUR IDENTITY <span>↗</span></button></div>
     </section>
 
