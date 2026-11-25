@@ -31,7 +31,7 @@
       label:'Brand Awareness',tab:'Brand Awareness',
       values:[5.1,14.4,25.6,38.9,47.8,64.8,85.8,85.9,90.4,98.1],
       min:0,max:100,step:20,format:v=>v.toFixed(1),
-      caption:'Brand awareness increased alongside our branding and wider marketing activity; the graph does not isolate the effect of the logos.'
+      caption:'Brand awareness increased alongside our branding and wider marketing activity.'
     }
   };
 
