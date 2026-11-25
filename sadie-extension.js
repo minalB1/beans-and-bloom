@@ -31,7 +31,7 @@
           </ul>
         </article>
         <div class="sadie-arrow" aria-hidden="true">➜</div>
-        <article class="sadie-panel sadie-pivot">
+        <article class="sadie-panel sadie-pivot pivot-hidden">
           <div class="sadie-panel-heading"><span class="sadie-count">02</span><h3>How we pivoted</h3></div>
           <ul>
             <li>Introduced the local high school band</li>
@@ -41,6 +41,9 @@
           </ul>
         </article>
       </div>
+      <button type="button" class="pivot-reveal-btn">
+    REVEAL HOW WE PIVOTED →
+</button>
       <article class="sadie-takeaway">
         <div class="sadie-takeaway-head">
           <div><span class="sadie-pill">OUR TURNING POINT</span><h3>What changed?</h3></div>
@@ -62,6 +65,19 @@
       </div>
     </div>`;
   finale.parentNode.insertBefore(page, finale);
+
+/* Reveal our pivot */
+
+const pivotButton = page.querySelector('.pivot-reveal-btn');
+const pivotPanel = page.querySelector('.sadie-pivot');
+
+pivotButton.addEventListener('click', () => {
+    pivotPanel.classList.remove('pivot-hidden');
+    pivotPanel.classList.add('pivot-visible');
+
+    pivotButton.hidden = true;
+});
+
 
   const finaleIndex = screenIds.indexOf('finale');
   if (!screenIds.includes('sadie')) screenIds.splice(finaleIndex >= 0 ? finaleIndex : screenIds.length, 0, 'sadie');

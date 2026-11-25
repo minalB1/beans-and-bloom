@@ -48,8 +48,83 @@ body:has(#sadie:not([hidden])) .site-header{background:#3b2a23;border-bottom-col
 body:has(#sadie:not([hidden])) .site-header .brand,
 body:has(#sadie:not([hidden])) .site-header .nav-link.active{color:#f6d5a0}
 body:has(#sadie:not([hidden])) .site-header .brand-mark{color:#e1b77a}
+
+/* Pivot — slide in from left */
+
+@keyframes pivotSlideIn {
+    from {
+        opacity: 0;
+        transform: translateX(-65px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+.sadie-page .pivot-slide-in {
+    animation: pivotSlideIn 0.7s ease-out both;
+}
 body:has(#sadie:not([hidden])) .global-footer{background:#3b2a23;color:#e0bb8e;border-color:#b18b58}
 @media(max-width:900px){.sadie-comparison{gap:12px}.sadie-panel{min-height:260px}.sadie-keypoints{grid-template-columns:1fr}.sadie-keypoints li:last-child{grid-column:auto}}
 @media(max-width:680px){.sadie-page{padding:26px 18px}.sadie-topline{align-items:start;flex-direction:column;margin-bottom:22px}.sadie-comparison{grid-template-columns:1fr;gap:10px}.sadie-panel{min-height:auto}.sadie-arrow{transform:rotate(90deg)}.sadie-takeaway-head{align-items:start;flex-direction:column}.sadie-footer-nav>span{display:none}.sadie-footer-nav{gap:8px}.sadie-page h2{font-size:clamp(43px,10vw,70px)}}
 @media(prefers-reduced-motion:reduce){.sadie-page *{transition:none!important;animation:none!important}}
+
+
+/* PIVOT — LEFT TO RIGHT REVEAL */
+
+.sadie-page .sadie-pivot.pivot-hidden {
+    opacity: 0;
+    transform: translateX(-90px);
+    visibility: hidden;
+}
+
+.sadie-page .sadie-pivot.pivot-visible {
+    visibility: visible;
+    animation: pivotSlideIn 0.75s
+        cubic-bezier(.22, 1, .36, 1) both;
+}
+
+@keyframes pivotSlideIn {
+    from {
+        opacity: 0;
+        transform: translateX(-90px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+/* Reveal button */
+
+.sadie-page .pivot-reveal-btn {
+    display: block;
+    margin: 0 auto 24px;
+    padding: 13px 24px;
+    border: 1px solid #75472f;
+    border-radius: 0;
+    background: #75472f;
+    color: #fff7eb;
+    font: 700 11px Arial, sans-serif;
+    letter-spacing: .12em;
+    cursor: pointer;
+}
+
+.sadie-page .pivot-reveal-btn:hover {
+    background: #956747;
+}
+
+.sadie-page .pivot-reveal-btn[hidden] {
+    display: none;
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .sadie-page .sadie-pivot.pivot-visible {
+        animation: none;
+    }
+}
+
 
