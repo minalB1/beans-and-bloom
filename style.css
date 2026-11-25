@@ -291,8 +291,8 @@ body:has(.christmas-home.active) .site-header .nav-link.active {
     right: 5% !important;
     left: auto !important;
 
-    width: 550px !important;
-    max-width: 55% !important;
+    width: 400px !important;
+    max-width: 45% !important;
 
     padding: 28px !important;
 
