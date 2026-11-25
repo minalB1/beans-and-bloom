@@ -1,0 +1,40 @@
+/* Beans & Bloom — extra graphs. Scoped so existing pages remain unchanged. */
+#finale .mini-bars,
+#finale .results-story > small { display:none; }
+
+.bb-performance { margin:34px 0 12px; padding:clamp(20px,3vw,36px); border:1px solid rgba(240,233,217,.25); background:#1b2b24; color:#f0e9d9; }
+.bb-performance .bb-kicker { color:#d9e4a5; text-transform:uppercase; font-size:11px; font-weight:700; letter-spacing:.18em; margin:0 0 12px; }
+.bb-performance h3 { font:400 clamp(27px,3vw,43px)/1.15 Georgia,'Times New Roman',serif; margin:0 0 20px; }
+.bb-tabs { display:grid; grid-template-columns:repeat(4,minmax(0,1fr)); gap:8px; margin:0 0 25px; }
+.bb-tabs button { padding:13px 8px; border:1px solid rgba(240,233,217,.3); background:transparent; color:#e1e4d7; font-size:12px; transition:background .2s,color .2s; border-radius:0; }
+.bb-tabs button[aria-selected="true"],.bb-tabs button:hover { background:#d9e4a5; color:#121d19; border-color:#d9e4a5; }
+.bb-chart-top { display:flex; justify-content:space-between; align-items:baseline; flex-wrap:wrap; gap:12px; margin:0 0 8px; }
+.bb-chart-top h4 { font:400 clamp(21px,2.5vw,31px) Georgia,serif; margin:0; }
+.bb-chart-top .bb-keyvalue { color:#d9e4a5; font-size:13px; font-weight:bold; }
+.bb-graph { width:100%; display:block; overflow:visible; }
+.bb-graph .bb-grid { stroke:rgba(240,233,217,.16); stroke-width:1; }
+.bb-graph .bb-axis-label { fill:#c0c8bc; font:12px Arial,Helvetica,sans-serif; }
+.bb-graph .bb-line { fill:none; stroke:#d9e4a5; stroke-width:3.5; stroke-linecap:round; stroke-linejoin:round; stroke-dasharray:100; stroke-dashoffset:0; animation:bb-draw .65s ease-out both; }
+.bb-graph .bb-dot { fill:#f0e9d9; stroke:#d9e4a5; stroke-width:2; }
+.bb-graph .bb-dot:focus { outline:none; fill:#d9e4a5; stroke:#ffffff; stroke-width:4; }
+.bb-graph .bb-zero { stroke:#d9e4a5; stroke-opacity:.4; stroke-dasharray:5 5; }
+.bb-caption { font-size:12px; color:#b9c4b8; line-height:1.7; margin:14px 0 0; }
+@keyframes bb-draw { from {stroke-dashoffset:100} to {stroke-dashoffset:0} }
+@media (prefers-reduced-motion:reduce) { .bb-graph .bb-line { animation:none; } }
+@media (max-width:700px) { .bb-tabs {grid-template-columns:repeat(2,minmax(0,1fr))} .bb-graph .bb-axis-label{font-size:11px} }
+
+/* Only the new Identity trigger and modal — does not touch the logo cards. */
+#identity .bb-brand-trigger { margin:24px 0 0; background:transparent; color:#ca522d; border:1px solid #ca522d; padding:14px 20px; font-weight:700; font-size:12px; letter-spacing:.06em; border-radius:0; }
+#identity .bb-brand-trigger:hover { background:#e95730; color:#fff; }
+.bb-modal[hidden] { display:none !important; }
+.bb-modal { position:fixed; inset:0; background:rgba(8,24,27,.75); z-index:9999; display:flex; justify-content:center; align-items:center; padding:20px; }
+.bb-modal-panel { position:relative; width:min(800px,100%); max-height:90vh; overflow-y:auto; border:1px solid #aad7dc; background:#e6f9fa; color:#28414b; padding:clamp(20px,4vw,40px); box-shadow:0 20px 80px rgba(0,0,0,.25); }
+.bb-modal-panel .bb-kicker { font-size:11px; font-weight:bold; letter-spacing:.2em; color:#e95730; margin:0 0 12px; }
+.bb-modal-panel h3 { font:400 clamp(30px,4vw,49px) Georgia,serif; margin:0 40px 15px 0; }
+.bb-modal-panel .bb-keyvalue { color:#df562e; font-size:14px; font-weight:bold; margin:0 0 12px; }
+.bb-modal-panel .bb-caption { color:#54727a; }
+.bb-modal-panel .bb-graph .bb-grid {stroke:#b4d5d8;}
+.bb-modal-panel .bb-graph .bb-axis-label {fill:#56757c;}
+.bb-modal-panel .bb-graph .bb-line {stroke:#e95730;}
+.bb-modal-panel .bb-graph .bb-dot {fill:#fff;stroke:#e95730;}
+.bb-modal-close { position:absolute; top:14px; right:14px; border:1px solid #bdced1; color:#28414b; background:#fff; width:38px; height:38px; border-radius:0; font-size:22px; }
