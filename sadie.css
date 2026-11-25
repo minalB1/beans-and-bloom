@@ -15,11 +15,11 @@
 .sadie-topline{display:flex;justify-content:space-between;align-items:center;gap:15px;color:#80573c;font-size:10px;font-weight:700;letter-spacing:.18em;margin-bottom:34px}
 .sadie-badge{border:1px solid #c9a77f;padding:9px 12px}
 .sadie-eyebrow{font-size:11px;font-weight:800;letter-spacing:.25em;color:#9d4533;margin:0 0 14px}
-.sadie-page h2{font-family:Georgia,'Times New Roman',serif;letter-spacing:-.055em;font-size:clamp(50px,6.15vw,94px);line-height:.95;font-weight:600;color:#30211e;margin:0 0 18px;max-width:1120px}
-.sadie-page h2 em{color:#b88745;font-weight:600;font-style:normal}
+.sadie-page h2{font-family:Georgia,'Times New Roman',serif;font-weight: 400; letter-spacing:-.055em;font-size:clamp(48px,6vw,86px);line-height:.95;font-weight:400;color:#30211e;margin:0 0 18px;max-width:1120px}
+.sadie-page h2 em{color:#b88745;font-weight:400;font-style:italic}
 .sadie-lede{max-width:930px;color:#6b5548;font-size:clamp(13px,1.2vw,16px);line-height:1.65;margin:0 0 26px}
 .sadie-comparison{display:grid;grid-template-columns:minmax(0,1fr) 40px minmax(0,1fr);align-items:center;gap:22px;margin-bottom:20px}
-.sadie-panel{padding:clamp(19px,2.2vw,30px);background:rgba(255,255,255,.55);border:1px solid rgba(155,114,64,.18);border-radius:18px;min-height:220px;box-shadow:0 10px 25px rgba(87,60,27,.045)}
+.sadie-panel{padding:clamp(19px,2.2vw,30px);background:rgba(255,255,255,.55);border:1px solid rgba(155,114,64,.18);border-radius:0px;min-height:220px;box-shadow:0 10px 25px rgba(87,60,27,.045)}
 .sadie-pivot{background:#ecd4ad;border-color:#d3b17c}
 .sadie-panel-heading{display:flex;align-items:center;gap:12px;margin-bottom:12px}
 .sadie-count{font-family:Georgia,serif;color:#b07d3d;font-size:24px}
@@ -27,20 +27,20 @@
 .sadie-page ul{padding-left:23px;margin:0;line-height:1.62}
 .sadie-page li{padding-left:4px;margin-bottom:6px;font-size:clamp(12px,1vw,15px)}
 .sadie-arrow{text-align:center;font-size:32px;color:#bd914e}
-.sadie-takeaway{padding:clamp(21px,2.2vw,32px);background:#fffdfa;border:1px solid #e6d6be;border-radius:20px;box-shadow:0 14px 30px rgba(85,61,43,.07)}
+.sadie-takeaway{padding:clamp(21px,2.2vw,32px);background:#fffdfa;border:1px solid #e6d6be;border-radius:0px;box-shadow:0 14px 30px rgba(85,61,43,.07)}
 .sadie-takeaway-head{display:flex;justify-content:space-between;align-items:end;gap:16px;margin-bottom:16px}
-.sadie-pill{display:inline-block;font-size:10px;letter-spacing:.1em;color:#8e3e2e;background:#f4e0c0;border-radius:999px;padding:8px 11px;margin-bottom:8px}
+.sadie-pill{display:inline-block;font-size:10px;letter-spacing:.1em;color:#8e3e2e;background:#f4e0c0;border-radius:0px;padding:8px 11px;margin-bottom:8px}
 .sadie-smallnote{font-size:10px;color:#99765d;letter-spacing:.12em}
 .sadie-keypoints{display:grid;grid-template-columns:1fr 1fr;column-gap:28px;row-gap:4px}
 .sadie-keypoints li:last-child{grid-column:1/-1}
 .sadie-keypoints strong{color:#81452d}
 .sadie-edit-row{display:flex;align-items:center;gap:11px;margin-top:17px}
-.sadie-edit{border:0;background:#392823;color:#fff4e3;border-radius:999px;padding:10px 16px;font-size:11px;font-weight:700}
+.sadie-edit{border:0;background:#392823;color:#fff4e3;border-radius:0px;padding:10px 16px;font-size:11px;font-weight:700}
 .sadie-edit:hover{background:#714730}
 .sadie-edit-row span{color:#89756a;font-size:11px}
-.sadie-keypoints.editing li{outline:1px dashed #bb8d53;outline-offset:2px;border-radius:4px;background:#fff8e7}
+.sadie-keypoints.editing li{outline:1px dashed #bb8d53;outline-offset:2px;border-radius:0px;background:#fff8e7}
 .sadie-footer-nav{display:flex;justify-content:space-between;align-items:center;gap:20px;margin-top:24px;color:#8f6c4c;font-size:10px;font-weight:700;letter-spacing:.14em}
-.sadie-footer-nav button{background:none;border:1px solid #b99061;border-radius:4px;padding:13px 17px;color:#70442d;font-size:11px;letter-spacing:.08em;font-weight:700}
+.sadie-footer-nav button{background:none;border:1px solid #b99061;border-radius:0px;padding:13px 17px;color:#70442d;font-size:11px;letter-spacing:.08em;font-weight:700}
 .sadie-footer-nav button:last-child{background:#75472f;border-color:#75472f;color:#fff7eb}
 .sadie-footer-nav button:hover{transform:translateY(-2px)}
 body:has(#sadie:not([hidden])){background:#f6e8d2}
@@ -52,3 +52,4 @@ body:has(#sadie:not([hidden])) .global-footer{background:#3b2a23;color:#e0bb8e;b
 @media(max-width:900px){.sadie-comparison{gap:12px}.sadie-panel{min-height:260px}.sadie-keypoints{grid-template-columns:1fr}.sadie-keypoints li:last-child{grid-column:auto}}
 @media(max-width:680px){.sadie-page{padding:26px 18px}.sadie-topline{align-items:start;flex-direction:column;margin-bottom:22px}.sadie-comparison{grid-template-columns:1fr;gap:10px}.sadie-panel{min-height:auto}.sadie-arrow{transform:rotate(90deg)}.sadie-takeaway-head{align-items:start;flex-direction:column}.sadie-footer-nav>span{display:none}.sadie-footer-nav{gap:8px}.sadie-page h2{font-size:clamp(43px,10vw,70px)}}
 @media(prefers-reduced-motion:reduce){.sadie-page *{transition:none!important;animation:none!important}}
+

@@ -53,12 +53,12 @@
           <li><strong>Customer experience:</strong> better-supported employees could provide better service</li>
           <li><strong>Long-term lesson:</strong> profitability and company values did not have to compete</li>
         </ul>
-        <div class="sadie-edit-row"><button type="button" id="sadie-edit" class="sadie-edit">Edit key points</button><span id="sadie-edit-status">Edits save in this browser only</span></div>
+        <div class="sadie-edit-row"><button type="button" id="sadie-edit" class="sadie-edit">Key points</button><span id="sadie-edit-status"></span></div>
       </article>
       <div class="sadie-footer-nav">
         <button type="button" class="sadie-back">← OUR IDENTITY</button>
         <span>BEANS &amp; BLOOM · TEAM JOURNEY</span>
-        <button type="button" class="sadie-next">THE FINALE →</button>
+        <button type="button" class="sadie-next">FINANCE →</button>
       </div>
     </div>`;
   finale.parentNode.insertBefore(page, finale);
@@ -109,14 +109,14 @@
       li.setAttribute('spellcheck', 'true');
     });
     keypointList.classList.toggle('editing', editing);
-    editButton.textContent = editing ? 'Save key points' : 'Edit key points';
+    editButton.textContent = editing ? 'Save key points' : 'Key points';
     if (editing) {
-      editStatus.textContent = 'Click into a bullet to edit. Save before presenting.';
+      editStatus.textContent = '';
       keypointList.querySelector('li')?.focus();
     } else {
       try {
         localStorage.setItem(storageKey, JSON.stringify([...keypointList.querySelectorAll('li')].map(li => li.innerText)));
-        editStatus.textContent = 'Saved in this browser only — not published to GitHub';
+        editStatus.textContent = '';
       } catch (_) { editStatus.textContent = 'Browser storage unavailable; changes may be temporary'; }
     }
   });
