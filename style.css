@@ -288,7 +288,7 @@ body:has(.christmas-home.active) .site-header .nav-link.active {
 .team-home-card {
     position: absolute !important;
     top: 95px !important;
-    right: 5% !important;
+    right: 15% !important;
     left: auto !important;
 
     width: 400px !important;
