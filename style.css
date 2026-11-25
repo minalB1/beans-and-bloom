@@ -201,3 +201,79 @@ body:has(.christmas-home.active) .site-header .nav-link.active {
 .christmas-home .cup-floating {
   border-color: #17100c;
 }
+
+
+/* MEET THE TEAM — HOMEPAGE */
+
+.team-home-card {
+    position: absolute;
+    top: 115px;
+    left: 5%;
+    width: min(430px, 40%);
+    z-index: 5;
+
+    background: rgba(10, 9, 9, 0.86);
+    border: 1px solid rgba(218, 179, 103, 0.6);
+    border-radius: 12px;
+
+    padding: 32px;
+    box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
+
+    animation: teamFadeIn 1.2s ease both;
+}
+
+.team-eyebrow {
+    color: #D9B66F;
+    font-size: 11px;
+    letter-spacing: 2px;
+}
+
+.team-home-card h2 {
+    font-family: Georgia, serif;
+    color: #FFF0D3;
+    font-size: 38px;
+    margin: 18px 0 25px;
+}
+
+.team-names {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+}
+
+.team-names span {
+    color: #F0E5D1;
+    font-size: 16px;
+}
+
+.team-footer {
+    color: #D6B77F;
+    font-family: Georgia, serif;
+    font-style: italic;
+    font-size: 15px;
+    margin-top: 30px;
+    padding-top: 18px;
+    border-top: 1px solid #5C4930;
+}
+
+@keyframes teamFadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@media (max-width: 900px) {
+    .team-home-card {
+        position: relative;
+        top: auto;
+        left: auto;
+        width: 100%;
+        margin-bottom: 25px;
+        grid-row: 1;
+    }
+}
