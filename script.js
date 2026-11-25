@@ -3,7 +3,7 @@ const CAFE_NAME = 'BEANS & BLOOM';
 
 /* Real selected decisions from the team report; alternatives are illustrative audience prompts. */
 const rounds = [
-  {title:'Our vision for Beans & Bloom',description:'How should we position the café at launch?',choices:['Premium','Cosy'],selected:0,reason:'A premium, welcoming café built around quality, ethics and employee wellbeing.'},
+  {title:'Our vision for Beans & Bloom',description:'How should we position the café at launch?',choices:['Premium and ethical','Cosy and affordable'],selected:0,reason:'A premium, ethical cafe using fair trade coffee and a welcoming environment for both colleagues and customers.'},
   {title:'Creating the ambience',description:'Should we invest in baked goods?',choices:['Purchase an oven','Keep coffee only'],selected:0,reason:'We invested $4,000 in an oven, and improved the ambience with the aroma of freshly baked goods.'},
   {title:'Making more responsible choices',description:'How should we handle organic waste?',choices:['Separate for composting','No additional separation'],selected:0,reason:'We chose collection for composting.'},
   {title:'Profit or principles',description:'Should we start selling sandwiches?',choices:['Sell sandwiches','Dont sell sandwiches'],selected:1,reason:'We prioritised our ESG goals and avoided additional environmental and hygiene-related risks.'},
